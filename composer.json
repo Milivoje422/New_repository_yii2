@@ -1,0 +1,23 @@
+{
+    "name": "windows10/zipa-photo",
+    "authors": [
+        {
+            "name": "Milivoje Ivic",
+            "email": "milivojeivic422@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "yiisoft/yii2": "*",
+        "cakebake/yii2-actionlog": "*",
+        "dektrium/yii2-rbac": "1.0.0-alpha@dev",
+        "pendalf89/yii2-scroll-to-top": "*",
+        "pendalf89/yii2-filemanager": "*",
+        "noam148/yii2-image-manager": "*",
+        "kartik-v/yii2-widgets": "*",
+        "imagine/imagine": "^0.6.3",
+        "perminder-klair/yii2-dropzone": "dev-master",
+        "2amigos/yii2-file-upload-widget": "~1.0",
+        "kartik-v/yii2-tabs-x": "@dev"
+    }
+}

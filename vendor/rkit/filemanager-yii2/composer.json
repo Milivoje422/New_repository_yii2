@@ -1,0 +1,44 @@
+{
+    "name": "rkit/filemanager-yii2",
+    "description": "FileManager for Yii2",
+    "keywords": ["yii2", "extension", "file manager", "manager", "upload", "resize", "files"],
+    "homepage": "https://github.com/rkit/filemanager-yii2",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Igor Romanov",
+            "email": "rkit.ru@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/rkit/filemanager-yii2/issues?state=open",
+        "source": "https://github.com/rkit/filemanager-yii2"
+    },
+    "require": {
+        "yiisoft/yii2": "^2.0"
+    },
+    "scripts": {
+        "phpdoc": "phpdoc",
+        "test-prepare": [
+            "php tests/yii migrate --migrationPath=@tests/migrations/ --interactive=0"
+        ],
+        "test": "phpunit --colors=always",
+        "test-coverage": "phpunit --coverage-html=tests/tmp/coverage.html --colors=always",
+        "test-coverage-open": "open tests/tmp/coverage.html/index.html"
+    },
+    "autoload": {
+        "psr-4": {
+            "rkit\\filemanager\\": "src"
+        }
+    },
+    "require-dev": {
+        "intervention/image": "^2.3.2",
+        "phpunit/phpunit": "^4.8",
+        "phpunit/dbunit": "^1.4",
+        "phpdocumentor/phpdocumentor": "^2.8.0",
+        "cvuorinen/phpdoc-markdown-public": "^0.1.2",
+        "league/flysystem": "^1.0",
+        "creocoder/yii2-flysystem": "^0.8.1"
+    }
+}
