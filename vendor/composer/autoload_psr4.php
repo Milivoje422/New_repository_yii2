@@ -6,7 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'zxbodya\\yii2\\galleryManager\\' => array($vendorDir . '/zxbodya/yii2-gallery-manager'),
     'yii\\swiftmailer\\' => array($vendorDir . '/yiisoft/yii2-swiftmailer'),
+    'yii\\jui\\' => array($vendorDir . '/yiisoft/yii2-jui'),
     'yii\\imagine\\' => array($vendorDir . '/yiisoft/yii2-imagine'),
     'yii\\httpclient\\' => array($vendorDir . '/yiisoft/yii2-httpclient'),
     'yii\\gii\\' => array($vendorDir . '/yiisoft/yii2-gii'),
@@ -54,6 +56,7 @@ return array(
     'dektrium\\rbac\\' => array($vendorDir . '/dektrium/yii2-rbac'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
     'cakebake\\actionlog\\' => array($vendorDir . '/cakebake/yii2-actionlog'),
+    'aquy\\gallery\\' => array($vendorDir . '/aquy/yii2-gallery-manager'),
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),

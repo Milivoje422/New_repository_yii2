@@ -17,7 +17,7 @@ class m170111_205158_create_file_table extends Migration
             'title' => $this->string()->notNull()->defaultValue(''),
             'name' => $this->string()->notNull()->defaultValue(''),
             'date_create' => $this->timestamp(),
-            'date_update' => $this->timestamp(),
+//            'date_update' => $this->timestamp(),
         ]);
     }
 

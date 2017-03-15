@@ -15,9 +15,14 @@ class ComposerStaticInit9f9e4e27e79990b4ee47bd62041b34f3
     );
 
     public static $prefixLengthsPsr4 = array (
+        'z' => 
+        array (
+            'zxbodya\\yii2\\galleryManager\\' => 28,
+        ),
         'y' => 
         array (
             'yii\\swiftmailer\\' => 16,
+            'yii\\jui\\' => 8,
             'yii\\imagine\\' => 12,
             'yii\\httpclient\\' => 15,
             'yii\\gii\\' => 8,
@@ -84,6 +89,10 @@ class ComposerStaticInit9f9e4e27e79990b4ee47bd62041b34f3
             'cebe\\markdown\\' => 14,
             'cakebake\\actionlog\\' => 19,
         ),
+        'a' => 
+        array (
+            'aquy\\gallery\\' => 13,
+        ),
         'W' => 
         array (
             'Webmozart\\Assert\\' => 17,
@@ -126,9 +135,17 @@ class ComposerStaticInit9f9e4e27e79990b4ee47bd62041b34f3
     );
 
     public static $prefixDirsPsr4 = array (
+        'zxbodya\\yii2\\galleryManager\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zxbodya/yii2-gallery-manager',
+        ),
         'yii\\swiftmailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer',
+        ),
+        'yii\\jui\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-jui',
         ),
         'yii\\imagine\\' => 
         array (
@@ -319,6 +336,10 @@ class ComposerStaticInit9f9e4e27e79990b4ee47bd62041b34f3
         'cakebake\\actionlog\\' => 
         array (
             0 => __DIR__ . '/..' . '/cakebake/yii2-actionlog',
+        ),
+        'aquy\\gallery\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/aquy/yii2-gallery-manager',
         ),
         'Webmozart\\Assert\\' => 
         array (

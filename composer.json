@@ -19,5 +19,6 @@
         "perminder-klair/yii2-dropzone": "dev-master",
         "2amigos/yii2-file-upload-widget": "~1.0",
         "kartik-v/yii2-tabs-x": "@dev"
+        
     }
 }

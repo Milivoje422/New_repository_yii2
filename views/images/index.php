@@ -12,26 +12,26 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="images-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+	<h1><?= Html::encode($this->title) ?></h1>
+	<?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
-        <?= Html::a(Yii::t('app', 'Create Images'), ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+	<p>
+		<?= Html::a(Yii::t('app', 'Create Images'), ['create'], ['class' => 'btn btn-success']) ?>
+	</p>
+	<?= GridView::widget([
+		'dataProvider' => $dataProvider,
+		'filterModel' => $searchModel,
+		'columns' => [
+			['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'img_name',
-            'img_description',
-            'img_path',
-            'created_at',
-            // 'updated_at',
+			'id',
+			'img_name',
+			'img_description',
+			'img_path',
+			'created_at',
+			// 'updated_at',
 
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
+			['class' => 'yii\grid\ActionColumn'],
+		],
+	]); ?>
 </div>

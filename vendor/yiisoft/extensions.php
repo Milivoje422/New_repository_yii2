@@ -185,15 +185,6 @@ return array (
       '@kartik/file' => $vendorDir . '/kartik-v/yii2-widget-fileinput',
     ),
   ),
-  'noam148/yii2-image-manager' => 
-  array (
-    'name' => 'noam148/yii2-image-manager',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@noam148/imagemanager' => $vendorDir . '/noam148/yii2-image-manager',
-    ),
-  ),
   'kartik-v/yii2-widget-typeahead' => 
   array (
     'name' => 'kartik-v/yii2-widget-typeahead',
@@ -363,6 +354,42 @@ return array (
     'alias' => 
     array (
       '@kartik/tabs' => $vendorDir . '/kartik-v/yii2-tabs-x',
+    ),
+  ),
+  'noam148/yii2-image-manager' => 
+  array (
+    'name' => 'noam148/yii2-image-manager',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@noam148/imagemanager' => $vendorDir . '/noam148/yii2-image-manager',
+    ),
+  ),
+  'yiisoft/yii2-jui' => 
+  array (
+    'name' => 'yiisoft/yii2-jui',
+    'version' => '2.0.0.0-beta',
+    'alias' => 
+    array (
+      '@yii/jui' => $vendorDir . '/yiisoft/yii2-jui',
+    ),
+  ),
+  'aquy/yii2-gallery-manager' => 
+  array (
+    'name' => 'aquy/yii2-gallery-manager',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@aquy/gallery' => $vendorDir . '/aquy/yii2-gallery-manager',
+    ),
+  ),
+  'zxbodya/yii2-gallery-manager' => 
+  array (
+    'name' => 'zxbodya/yii2-gallery-manager',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@zxbodya/yii2/galleryManager' => $vendorDir . '/zxbodya/yii2-gallery-manager',
     ),
   ),
 );

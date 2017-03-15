@@ -3,14 +3,12 @@
 namespace app\controllers;
 
 use Yii;
-use yii\bootstrap\ActiveForm;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
-use app\models\PostTranslation;
+use yii\web\NotFoundHttpException;
 use app\models\Images;
-use yii\imagine\BaseImage;
 class FileController extends Controller
 {
 
@@ -64,56 +62,48 @@ class FileController extends Controller
 
 	}
 
+	public function actionView($id)
+	{
+		return $this->render('view', [
+			'model' => $this->findImageModel($id),
+		]);
+	}
 
-	public function actionUploadimage($id = NULL){
+
+	public function actionUploadimage(){
 
 		$model = new Images();
-		if(empty($id)) {
 			if ($model->load(Yii::$app->request->post())) {
 				$model->beforeUpload(UploadedFile::getInstance($model, 'file'));
 				$model->created_at = date('Y-m-d H:i:s');
 
 				if ($model->save()) {
 					$model->upload(UploadedFile::getInstance($model, 'file'));
-
-					return $this->redirect(['uploadimage', 'id' => $model->id],
-							($model->image_group == "SINGLE" ? '' :
-								($model->image_group == "PHOTO_STORY" ? '?gallery_images' :
-									($model->image_group == "PHOTO_EVENT_STORY" ? '?image_events' : '')
-								)
-							)
-					);
-
+					if($model->image_group === "SINGLE") {
+						return $this->redirect(['view', 'id' => $model->id]);
+					}else {
+						return $this->redirect(['gallery', 'id' => $model->id,
+							'model' => $model]);
+					}
 				} else {
 					var_dump($model->getErrors());
 					die();
 				}
-			} else {
-				return $this->render('create_image', [
-					'model' => $model,
-				]);
-			}
-		}else{
-			$model = $this->findModel($id);
-			if ($model->load(Yii::$app->request->post())) {
-				$model->beforeUpload(UploadedFile::getInstance($model, 'file'));
-				$model->updated_ad = date('Y-m-d H:i:s');
-
-				if ($model->save()) {
-					$model->upload(UploadedFile::getInstance($model, 'file'));
-
-					return $this->redirect(['image_view', 'id' => $model->id]);
-				} else {
-					var_dump($model->getErrors());
-					die();
-				}
-			} else {
-				return $this->render('create_image', [
-					'model' => $model,
-				]);
-			}
+		} else {
+			return $this->render('create_image', [
+				'model' => $model,
+			]);
 		}
+	}
 
+
+	protected function findImageModel($id)
+	{
+		if (($model = Images::findOne($id)) !== null) {
+			return $model;
+		} else {
+			throw new NotFoundHttpException('The requested page does not exist.');
+		}
 	}
 
 }

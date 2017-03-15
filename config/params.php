@@ -3,6 +3,10 @@
 return [
 	'adminEmail' => 'zipaphoto@gmail.com',
     'languages' => [
+	    'sr' => [
+		    'language' => 'Serbian',
+		    'flag' => '/bootstrap/img/langsr.png',
+	    ],
         'ru' => [
 	        'language' => 'Russian',
 	        'flag' => '/bootstrap/img/RussiaFlag.png',
@@ -12,13 +16,14 @@ return [
 	        'flag' => '/bootstrap/img/langen.png',
 	    ],
         'fr' => [
-	        'language' => 'French',
+	        'language' => 'Français',
 	        'flag' => '/bootstrap/img/FranceFlag.png',
         ],
-        'sr' => [
-	        'language' => 'Serbian',
-	        'flag' => '/bootstrap/img/langsr.png',
-        ],
+		'de' => [
+			'language' => 'Deutschland',
+			'flag' => '',
+		],
+
 	],
     'app_name' => 'ZipaPhoto',
 	'errorEmail' => 'tumenko.slavisa@gmail.com',

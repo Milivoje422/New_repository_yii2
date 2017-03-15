@@ -24,10 +24,11 @@ class AppAsset extends AssetBundle
     ];
 
 	public $js = [
+        'js/dropzone.js',
 		'js/googleAnalistic.js',
 		'js/customJs.js',
 		'js/jquery.dd.js',
-//		'js/bs_js/tether.min.js',
+		'js/yui.min.js',
 //		'js/bs_js/bootstrap.js',
 
 	];
